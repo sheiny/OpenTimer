@@ -25,6 +25,7 @@ class Gate {
 
     const std::string& cell_name() const;
 
+    std::vector<Arc*> _arcs;
   private:
 
     std::string _name;
@@ -32,7 +33,7 @@ class Gate {
     CellView _cell;
 
     std::vector<Pin*> _pins;
-    std::vector<Arc*> _arcs;
+    //std::vector<Arc*> _arcs;
     std::vector<Test*> _tests;
 
     //void _repower(CellView);

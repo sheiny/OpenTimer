@@ -122,6 +122,7 @@ class Timer {
     inline const auto& tests() const;
     inline const auto& arcs() const;
 
+    std::unordered_map<std::string, Gate> _gates;
   private:
 
     mutable std::shared_mutex _mutex;
@@ -147,7 +148,7 @@ class Timer {
     std::unordered_map<std::string, PrimaryOutput> _pos; 
     std::unordered_map<std::string, Pin> _pins;
     std::unordered_map<std::string, Net> _nets;
-    std::unordered_map<std::string, Gate> _gates;
+    //std::unordered_map<std::string, Gate> _gates;
     std::unordered_map<std::string, Clock> _clocks;
  
     std::list<Test> _tests;
